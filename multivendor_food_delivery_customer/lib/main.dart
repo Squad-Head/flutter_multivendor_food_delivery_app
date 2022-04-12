@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:multivendor_food_delivery_customer/presentation/demo_delivery_tracking_model.dart';
 
 import 'presentation/delivery_tracking_widget.dart';
 
@@ -15,14 +16,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       minTextAdapt: true,
-      builder: () => const MaterialApp(
+      builder: () => MaterialApp(
         debugShowCheckedModeBanner: false,
         // Use this line to prevent extra rebuilds
         useInheritedMediaQuery: true,
         title: 'Multi Vendor Delivery App',
         home: Scaffold(
           body: SafeArea(
-            child: DeliveryTrackingWidget(),
+            child: DeliveryTrackingWidget(
+                deliveryTrackingModel: deliveryModelList[3]),
           ),
         ),
       ),
