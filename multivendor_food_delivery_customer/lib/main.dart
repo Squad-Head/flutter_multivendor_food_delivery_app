@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
           body: SafeArea(
             child: DeliveryTrackingWidget(
-                deliveryTrackingModel: deliveryModelList[3]),
+                deliveryTrackingModel: deliveryModelList[0]),
           ),
         ),
       ),

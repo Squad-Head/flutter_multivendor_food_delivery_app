@@ -12,7 +12,6 @@ class DeliveryTrackingWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(deliveryTrackingModel.order);
     return Container(
       padding: EdgeInsets.all(25.w),
       height: 500.h,

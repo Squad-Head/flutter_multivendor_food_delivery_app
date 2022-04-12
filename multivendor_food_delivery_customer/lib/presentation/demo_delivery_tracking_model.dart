@@ -30,9 +30,9 @@ List deliveryModelList = [
     order: 8,
     titleText: 'Total Pending Orders',
     icon: Icon(
-      Icons.queue,
+      Icons.pending_actions,
       size: 100.sp,
-      color: const Color.fromARGB(255, 51, 189, 139),
+      color: const Color.fromARGB(255, 7, 7, 86),
     ),
     backgroundColor: const Color(0xFFd3bdd4),
   ),
@@ -40,7 +40,7 @@ List deliveryModelList = [
     order: 1,
     titleText: 'Todays Order',
     icon: Icon(
-      Icons.calendar_view_day_sharp,
+      Icons.calendar_month,
       size: 100.sp,
       color: const Color.fromARGB(255, 69, 62, 133),
     ),
