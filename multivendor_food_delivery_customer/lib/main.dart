@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:multivendor_food_delivery_customer/presentation/demo_delivery_tracking_model.dart';
 
-import 'presentation/delivery_tracking_widget.dart';
+import 'presentation/widget/delivery_tracking_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,8 +23,19 @@ class MyApp extends StatelessWidget {
         title: 'Multi Vendor Delivery App',
         home: Scaffold(
           body: SafeArea(
-            child: DeliveryTrackingWidget(
-                deliveryTrackingModel: deliveryModelList[0]),
+            child: GridView.builder(
+              padding: const EdgeInsets.all(10),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+                crossAxisCount: 2,
+              ),
+              itemCount: deliveryModelList.length,
+              itemBuilder: (BuildContext context, int index) {
+                return DeliveryTrackingWidget(
+                    deliveryTrackingModel: deliveryModelList[index]);
+              },
+            ),
           ),
         ),
       ),
