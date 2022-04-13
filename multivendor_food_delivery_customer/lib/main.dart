@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:multivendor_food_delivery_customer/presentation/constants.dart';
-import 'package:multivendor_food_delivery_customer/presentation/welcome_grid_demoModel.dart';
 
 import 'presentation/screens/delivery_welcome_screen.dart';
-import 'presentation/widget/welcom_grid_container_widget.dart';
 
 void main() {
   runApp(const MyApp());
