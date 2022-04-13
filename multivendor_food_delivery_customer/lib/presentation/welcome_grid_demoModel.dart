@@ -22,7 +22,7 @@ List deliveryModelList = [
     icon: Icon(
       Icons.delivery_dining,
       size: 100.sp,
-      color: const Color.fromARGB(255, 69, 62, 133),
+      color: const Color(0xFFb0634e),
     ),
     backgroundColor: const Color(0xFFe4f0f4),
   ),
@@ -32,7 +32,7 @@ List deliveryModelList = [
     icon: Icon(
       Icons.pending_actions,
       size: 100.sp,
-      color: const Color.fromARGB(255, 7, 7, 86),
+      color: const Color(0xFF145369),
     ),
     backgroundColor: const Color(0xFFd3bdd4),
   ),
@@ -42,7 +42,7 @@ List deliveryModelList = [
     icon: Icon(
       Icons.calendar_month,
       size: 100.sp,
-      color: const Color.fromARGB(255, 69, 62, 133),
+      color: const Color(0xFF29a465),
     ),
     backgroundColor: const Color(0xFFfdebd1),
   ),
@@ -52,7 +52,7 @@ List deliveryModelList = [
     icon: Icon(
       Icons.attach_money,
       size: 100.sp,
-      color: const Color.fromARGB(255, 69, 62, 133),
+      color: const Color(0xFFbea925),
     ),
     backgroundColor: const Color(0xFFd7e2dc),
   ),

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:multivendor_food_delivery_customer/presentation/demo_delivery_tracking_model.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:multivendor_food_delivery_customer/presentation/constants.dart';
+import 'package:multivendor_food_delivery_customer/presentation/welcome_grid_demoModel.dart';
 
-import 'presentation/widget/delivery_tracking_widget.dart';
+import 'presentation/widget/welcom_grid_container_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,18 +25,34 @@ class MyApp extends StatelessWidget {
         title: 'Multi Vendor Delivery App',
         home: Scaffold(
           body: SafeArea(
-            child: GridView.builder(
-              padding: const EdgeInsets.all(10),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10,
-                crossAxisCount: 2,
-              ),
-              itemCount: deliveryModelList.length,
-              itemBuilder: (BuildContext context, int index) {
-                return DeliveryTrackingWidget(
-                    deliveryTrackingModel: deliveryModelList[index]);
-              },
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Welcome Admin!',
+                  style: GoogleFonts.lato(
+                      fontSize: 25, fontWeight: FontWeight.w500),
+                ),
+                // TODO: add name dynamically
+                SizedBox(height: 20.h),
+
+                Expanded(
+                  child: GridView.builder(
+                    padding: EdgeInsets.all(20.w),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      childAspectRatio: 1.2,
+                      crossAxisSpacing: 20.w,
+                      mainAxisSpacing: 20.h,
+                      crossAxisCount: 2,
+                    ),
+                    itemCount: deliveryModelList.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return DeliveryTrackingWidget(
+                          deliveryTrackingModel: deliveryModelList[index]);
+                    },
+                  ),
+                ),
+              ],
             ),
           ),
         ),

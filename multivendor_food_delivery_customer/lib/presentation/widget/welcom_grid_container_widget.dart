@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:multivendor_food_delivery_customer/presentation/constants.dart';
-import 'package:multivendor_food_delivery_customer/presentation/demo_delivery_tracking_model.dart';
+import 'package:multivendor_food_delivery_customer/presentation/welcome_grid_demoModel.dart';
 
 class DeliveryTrackingWidget extends StatelessWidget {
   const DeliveryTrackingWidget({
@@ -14,8 +14,6 @@ class DeliveryTrackingWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(25.w),
-      height: 500.h,
-      width: 500.w,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -27,12 +25,15 @@ class DeliveryTrackingWidget extends StatelessWidget {
               deliveryTrackingModel.order.runtimeType == double
                   ? '\$${deliveryTrackingModel.order}'
                   : '${deliveryTrackingModel.order}',
+              // TODO: calculate the total selling price and pass here
               style: kPrimaryHeadingStyle),
+          //? conditions to check if the value is iteger or double
           SizedBox(
             height: 50.h,
           ),
           Text(
             deliveryTrackingModel.titleText,
+            // TODO: load dinamically from the app
             style: kSecondaryHeadingStyle,
           ),
         ],
@@ -42,14 +43,14 @@ class DeliveryTrackingWidget extends StatelessWidget {
           color: deliveryTrackingModel.backgroundColor,
           boxShadow: const [
             BoxShadow(
-              color: Colors.grey,
-              blurRadius: 10,
+              color: Color.fromARGB(255, 203, 199, 199),
+              blurRadius: 6,
               blurStyle: BlurStyle.normal,
               offset: Offset(
-                5.0,
-                5.0,
+                3.0,
+                3.0,
               ),
-              spreadRadius: 2.0,
+              spreadRadius: 1.0,
             ),
           ]),
     );
