@@ -14,7 +14,7 @@ final TextStyle kSecondaryHeadingStyle = GoogleFonts.lato(
   color: const Color.fromARGB(255, 60, 58, 58),
 );
 final TextStyle kTitleStyle = GoogleFonts.lato(
-  fontSize: 50.sp,
+  fontSize: 60.sp,
   fontWeight: FontWeight.w600,
 );
 
@@ -23,4 +23,4 @@ final TextStyle kSubTitleStyle = GoogleFonts.lato(
   fontWeight: FontWeight.w700,
 );
 
-final TextStyle kTextStyle = GoogleFonts.lato(fontSize: 30.sp);
+final TextStyle kTextStyle = GoogleFonts.lato(fontSize: 40.sp);
