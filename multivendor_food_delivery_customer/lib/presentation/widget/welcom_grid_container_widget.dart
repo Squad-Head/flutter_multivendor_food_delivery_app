@@ -44,13 +44,13 @@ class DeliveryTrackingWidget extends StatelessWidget {
           boxShadow: const [
             BoxShadow(
               color: Color.fromARGB(255, 203, 199, 199),
-              blurRadius: 6,
+              blurRadius: 4,
               blurStyle: BlurStyle.normal,
               offset: Offset(
-                3.0,
-                3.0,
+                2.0,
+                5.0,
               ),
-              spreadRadius: 1.0,
+              spreadRadius: 0.5,
             ),
           ]),
     );
