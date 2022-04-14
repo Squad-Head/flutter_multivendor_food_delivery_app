@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:merchant_multivendor_food_delivery_app/Presentation/constants.dart';
 
-import '../widget/new_order_widget.dart';
-import '../widget/welcome_grid_widget.dart';
+import '../widget/deliveryWelcome/new_order_widget.dart';
+import '../widget/deliveryWelcome/welcome_grid_widget.dart';
 
 class DeliveryWelcomeScreen extends StatelessWidget {
   final String oderId = "#dfe1524";

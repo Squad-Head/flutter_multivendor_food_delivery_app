@@ -12,9 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
+      designSize: const Size(1080, 1920),
       minTextAdapt: true,
       builder: () => const MaterialApp(),
-      designSize: const Size(1080, 1920),
     );
   }
 }

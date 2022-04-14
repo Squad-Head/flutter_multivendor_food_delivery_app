@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../welcome_grid_demoModel.dart';
+import 'welcome_grid_demoModel.dart';
 import 'welcom_grid_container_widget.dart';
 
 class WelcomeGridWidget extends StatelessWidget {

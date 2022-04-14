@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'presentation/screens/delivery_welcome_screen.dart';
+
+import 'package:merchant_multivendor_food_delivery_app/Presentation/screens/use_current_location_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,17 +17,18 @@ class MyApp extends StatelessWidget {
       designSize: const Size(360, 690),
       minTextAdapt: true,
       builder: (_) {
-        return MaterialApp(
+        return const MaterialApp(
           debugShowCheckedModeBanner: false,
           // Use this line to prevent extra rebuilds
           useInheritedMediaQuery: true,
           title: 'First Method',
           // You can use the library anywhere in the app even in theme
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
-            textTheme: TextTheme(bodyText2: TextStyle(fontSize: 30.sp)),
+
+          home: Scaffold(
+            body: SafeArea(
+              child: UserCurrentLocationScreen(),
+            ),
           ),
-          home: const Scaffold(body: SafeArea(child: DeliveryWelcomeScreen())),
         );
       },
     );
