@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:multivendor_food_delivery_customer/presentation/constants.dart';
-import 'package:multivendor_food_delivery_customer/presentation/welcome_grid_demoModel.dart';
+
+import '../constants.dart';
+import '../welcome_grid_demoModel.dart';
 
 class DeliveryTrackingWidget extends StatelessWidget {
   const DeliveryTrackingWidget({
@@ -13,13 +14,14 @@ class DeliveryTrackingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(25.w),
+      padding: EdgeInsets.fromLTRB(15.w, 15.h, 5.w, 5.h),
+      margin: EdgeInsets.all(4.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           deliveryTrackingModel.icon,
           SizedBox(
-            height: 50.h,
+            height: 10.h,
           ),
           Text(
               deliveryTrackingModel.order.runtimeType == double
@@ -29,17 +31,20 @@ class DeliveryTrackingWidget extends StatelessWidget {
               style: kPrimaryHeadingStyle),
           //? conditions to check if the value is iteger or double
           SizedBox(
-            height: 50.h,
+            height: 10.h,
           ),
-          Text(
-            deliveryTrackingModel.titleText,
-            // TODO: load dinamically from the app
-            style: kSecondaryHeadingStyle,
+          Flexible(
+            fit: FlexFit.tight,
+            child: Text(
+              deliveryTrackingModel.titleText,
+              // TODO: load dinamically from the app
+              style: kSecondaryHeadingStyle,
+            ),
           ),
         ],
       ),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30.r),
+          borderRadius: BorderRadius.circular(20.r),
           color: deliveryTrackingModel.backgroundColor,
           boxShadow: const [
             BoxShadow(

@@ -19,7 +19,7 @@ class NewOrdersWIdget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text('New Orders', style: kTitleStyle),
-        SizedBox(height: 50.h),
+        SizedBox(height: 15.h),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -35,7 +35,7 @@ class NewOrdersWIdget extends StatelessWidget {
             )
           ],
         ),
-        SizedBox(height: 20.h),
+        SizedBox(height: 5.h),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -46,10 +46,7 @@ class NewOrdersWIdget extends StatelessWidget {
                 style: kTextStyle)
           ],
         ),
-        SizedBox(
-          height: 20.h,
-        ),
-        StepperWidget()
+        Expanded(child: StepperWidget())
       ],
     );
   }

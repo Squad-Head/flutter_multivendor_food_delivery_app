@@ -21,7 +21,7 @@ List deliveryModelList = [
     titleText: 'Total Completed Orders',
     icon: Icon(
       Icons.delivery_dining,
-      size: 120.sp,
+      size: 35.sp,
       color: const Color(0xFFf47721),
     ),
     backgroundColor: const Color(0xFFe4f0f4),
@@ -31,7 +31,7 @@ List deliveryModelList = [
     titleText: 'Total Pending Orders',
     icon: Icon(
       Icons.pending_actions,
-      size: 120.sp,
+      size: 35.sp,
       color: const Color(0xFF145369),
     ),
     backgroundColor: const Color(0xFFd3bdd4),
@@ -41,7 +41,7 @@ List deliveryModelList = [
     titleText: 'Todays Orders',
     icon: Icon(
       Icons.calendar_month,
-      size: 120.sp,
+      size: 35.sp,
       color: const Color(0xFF008374),
     ),
     backgroundColor: const Color(0xFFfdebd1),
@@ -51,7 +51,7 @@ List deliveryModelList = [
     titleText: 'Cash in your hand',
     icon: Icon(
       Icons.attach_money,
-      size: 120.sp,
+      size: 35.sp,
       color: const Color(0xFFb52e31),
     ),
     backgroundColor: const Color(0xFFd7e2dc),
