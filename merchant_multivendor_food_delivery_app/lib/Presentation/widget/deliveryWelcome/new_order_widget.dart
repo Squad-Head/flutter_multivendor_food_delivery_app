@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../constants.dart';
-import '../screens/delivery_welcome_screen.dart';
+import '../../constants.dart';
 import 'stepper_widget.dart';
 
 class NewOrdersWIdget extends StatelessWidget {

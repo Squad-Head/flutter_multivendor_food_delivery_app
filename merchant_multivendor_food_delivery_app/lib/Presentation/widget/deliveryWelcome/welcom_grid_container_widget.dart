@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../constants.dart';
-import '../welcome_grid_demoModel.dart';
+import '../../constants.dart';
+import 'welcome_grid_demoModel.dart';
 
 class DeliveryTrackingWidget extends StatelessWidget {
   const DeliveryTrackingWidget({

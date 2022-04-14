@@ -26,7 +26,15 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
             textTheme: TextTheme(bodyText2: TextStyle(fontSize: 30.sp)),
           ),
-          home: const Scaffold(body: SafeArea(child: DeliveryWelcomeScreen())),
+          home: Scaffold(
+            body: SafeArea(
+              child: Column(
+                children: [
+                  Image.asset('..\assets\illustrations\location_access.svg')
+                ],
+              ),
+            ),
+          ),
         );
       },
     );
