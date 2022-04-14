@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'package:multivendor_food_delivery_customer/presentation/constants.dart';
+import 'package:merchant_multivendor_food_delivery_app/Presentation/constants.dart';
 
 import '../widget/new_order_widget.dart';
 import '../widget/welcome_grid_widget.dart';
@@ -20,19 +19,18 @@ class DeliveryWelcomeScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 20.h),
           Text('Welcome Admin!', style: kTitleStyle),
           // TODO: add name dynamically
           SizedBox(height: 10.h),
 
           const Expanded(
             child: WelcomeGridWidget(),
-            flex: 9,
+            flex: 18,
           ),
 
           Expanded(
             child: NewOrdersWIdget(oderId: oderId),
-            flex: 8,
+            flex: 14,
           ),
 
           const Divider(

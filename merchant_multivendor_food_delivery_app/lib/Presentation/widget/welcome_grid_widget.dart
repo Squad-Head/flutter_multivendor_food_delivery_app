@@ -16,9 +16,9 @@ class WelcomeGridWidget extends StatelessWidget {
       // physics: const NeverScrollableScrollPhysics(),
 
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        childAspectRatio: 1.3,
-        crossAxisSpacing: 30.w,
-        mainAxisSpacing: 30.h,
+        childAspectRatio: 1.1.w,
+        crossAxisSpacing: 1.w,
+        mainAxisSpacing: 1.h,
         crossAxisCount: 2,
       ),
       itemCount: deliveryModelList.length,
