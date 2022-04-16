@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:merchant_multivendor_food_delivery_app/Presentation/screens/use_current_location_screen.dart';
+import 'Presentation/screens/place_order_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
 
           home: Scaffold(
             body: SafeArea(
-              child: UserCurrentLocationScreen(),
+              child: PlaceOrder(),
             ),
           ),
         );
