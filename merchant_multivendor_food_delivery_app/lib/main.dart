@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'package:merchant_multivendor_food_delivery_app/Presentation/screens/use_current_location_screen.dart';
+import 'package:merchant_multivendor_food_delivery_app/Presentation/screens/google_map.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(360, 690),
       minTextAdapt: true,
       builder: (_) {
-        return const MaterialApp(
+        return MaterialApp(
           debugShowCheckedModeBanner: false,
           // Use this line to prevent extra rebuilds
           useInheritedMediaQuery: true,
@@ -26,7 +25,11 @@ class MyApp extends StatelessWidget {
 
           home: Scaffold(
             body: SafeArea(
-              child: UserCurrentLocationScreen(),
+              child: Container(
+                child: MapSample(),
+                height: 400.h,
+                width: double.infinity,
+              ),
             ),
           ),
         );
