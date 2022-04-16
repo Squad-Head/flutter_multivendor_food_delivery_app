@@ -28,10 +28,12 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cupertino_icons: ^1.0.2
+  fl_chart: ^0.50.1
   flex_color_scheme: ^4.2.0
+  data_table_2: ^2.2.1
   flutter:
     sdk: flutter
-  flutter_screenutil: ^5.3.1
+  flutter_screenutil: ^5.4.0
 
 dev_dependencies:
   flutter_lints: ^1.0.0

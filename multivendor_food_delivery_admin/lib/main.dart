@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'presentation/admin/admin_screen.dart';
 
 void main() {
@@ -17,10 +16,20 @@ class MyApp extends StatelessWidget {
       designSize: const Size(360, 690),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: () => const MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: AdminScreen(),
-      ),
+      builder: (_) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          // Use this line to prevent extra rebuilds
+          useInheritedMediaQuery: true,
+
+          // You can use the library anywhere in the app even in theme
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+            textTheme: TextTheme(bodyText2: TextStyle(fontSize: 10.sp)),
+          ),
+          home: const AdminScreen(),
+        );
+      },
     );
   }
 }
