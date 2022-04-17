@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'Presentation/screens/place_order_screen.dart';
+import 'Presentation/screens/order_history_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,12 +21,12 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           // Use this line to prevent extra rebuilds
           useInheritedMediaQuery: true,
-          title: 'First Method',
+
           // You can use the library anywhere in the app even in theme
 
-          home: Scaffold(
-            body: SafeArea(
-              child: PlaceOrder(),
+          home: SafeArea(
+            child: Scaffold(
+              body: OrderHistoryScreen(),
             ),
           ),
         );
