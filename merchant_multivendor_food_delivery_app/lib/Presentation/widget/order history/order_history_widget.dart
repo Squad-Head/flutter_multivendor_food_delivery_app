@@ -11,7 +11,7 @@ class OrderHistoryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 125.h,
+      height: 110.h,
       decoration: BoxDecoration(
         border: Border(
           bottom: BorderSide(width: 1.w, color: const Color(0xFFf2f2f9)),
@@ -27,7 +27,7 @@ class OrderHistoryWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Order Id: #UFE858',
+                  'Order ID: #UFE858',
                   style: kTitleStyle,
                 ),
                 SizedBox(
@@ -43,7 +43,9 @@ class OrderHistoryWidget extends StatelessWidget {
                 Text(
                   'Order Accepted',
                   style: kTextStyle.copyWith(
-                      fontSize: 16.sp, fontWeight: FontWeight.bold),
+                      color: const Color(0xFFffbc5f),
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.bold),
                 ),
               ],
             ),

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:merchant_multivendor_food_delivery_app/Presentation/constants.dart';
 
-import 'Presentation/widget/order history/order_history_widget.dart';
+import 'Presentation/screens/order_history_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(360, 690),
       minTextAdapt: true,
       builder: (_) {
-        return MaterialApp(
+        return const MaterialApp(
           debugShowCheckedModeBanner: false,
           // Use this line to prevent extra rebuilds
           useInheritedMediaQuery: true,
@@ -27,18 +26,8 @@ class MyApp extends StatelessWidget {
 
           home: SafeArea(
             child: Scaffold(
-                body: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Order History',
-                    style: kSubTitleStyle,
-                  )
-                ],
-              ),
-            )),
+              body: OrderHistoryScreen(),
+            ),
           ),
         );
       },
