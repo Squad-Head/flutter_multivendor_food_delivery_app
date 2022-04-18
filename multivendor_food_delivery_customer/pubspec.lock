@@ -78,11 +78,39 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "6.1.2"
+  firebase_core:
+    dependency: "direct main"
+    description:
+      name: firebase_core
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.14.1"
+  firebase_core_platform_interface:
+    dependency: transitive
+    description:
+      name: firebase_core_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.2.5"
+  firebase_core_web:
+    dependency: transitive
+    description:
+      name: firebase_core_web
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.6.2"
   flutter:
     dependency: "direct main"
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_hooks:
+    dependency: "direct main"
+    description:
+      name: flutter_hooks
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.18.3"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -90,6 +118,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.4"
+  flutter_riverpod:
+    dependency: transitive
+    description:
+      name: flutter_riverpod
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.3"
   flutter_screenutil:
     dependency: "direct main"
     description:
@@ -102,6 +137,11 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   google_fonts:
     dependency: "direct main"
     description:
@@ -109,6 +149,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.3.1"
+  hooks_riverpod:
+    dependency: "direct main"
+    description:
+      name: hooks_riverpod
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.3"
   http:
     dependency: transitive
     description:
@@ -123,6 +170,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.0"
+  js:
+    dependency: transitive
+    description:
+      name: js
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.6.3"
   lints:
     dependency: transitive
     description:
@@ -228,6 +282,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.4"
+  riverpod:
+    dependency: transitive
+    description:
+      name: riverpod
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.3"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -247,6 +308,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.10.0"
+  state_notifier:
+    dependency: transitive
+    description:
+      name: state_notifier
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.7.2+1"
   stream_channel:
     dependency: transitive
     description:
