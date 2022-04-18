@@ -11,7 +11,7 @@ class CheckOutScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        leading: Icon(
+        leading: const Icon(
           FontAwesomeIcons.angleLeft,
           color: Colors.black,
         ),
@@ -19,7 +19,7 @@ class CheckOutScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 "KFC - Gulsan",
                 style: TextStyle(color: Colors.black),
               ),
@@ -35,7 +35,7 @@ class CheckOutScreen extends StatelessWidget {
         ),
       ),
       body: Stack(children: [
-        SingleChildScrollView(),
+        const SingleChildScrollView(),
         Align(
           alignment: Alignment.bottomCenter,
           child: Container(
@@ -45,12 +45,11 @@ class CheckOutScreen extends StatelessWidget {
             child: Column(children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   Text("data"),
                   Text("RM10.00"),
                 ],
               ),
-              
             ]),
           ),
         )

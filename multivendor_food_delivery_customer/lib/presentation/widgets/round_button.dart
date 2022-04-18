@@ -30,7 +30,7 @@ class RoundButton extends StatelessWidget {
             SizedBox(
               width: 12.w,
             ),
-            FlatButton(
+            TextButton(
               onPressed: function,
               child: Text(
                 buttonName,

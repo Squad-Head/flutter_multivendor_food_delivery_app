@@ -78,7 +78,7 @@ class SingUpScreen extends StatelessWidget {
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w700,
                       ))),
-                  child: Text("Create Account"),
+                  child: const Text("Create Account"),
                 ),
               ),
               SizedBox(
@@ -86,7 +86,7 @@ class SingUpScreen extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Expanded(child: Divider()),
+                  const Expanded(child: Divider()),
                   SizedBox(
                     width: 16.w,
                   ),
@@ -98,7 +98,7 @@ class SingUpScreen extends StatelessWidget {
                   SizedBox(
                     width: 16.w,
                   ),
-                  Expanded(child: Divider()),
+                  const Expanded(child: Divider()),
                 ],
               ),
               SizedBox(
@@ -125,12 +125,12 @@ class SingUpScreen extends StatelessWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Icon(
+                      const Icon(
                         FontAwesomeIcons.google,
                         color: Colors.redAccent,
                       ),
                       SizedBox(width: 10.w),
-                      Text("Google"),
+                      const Text("Google"),
                     ],
                   ),
                 ),
@@ -171,11 +171,11 @@ Widget getTextField({required String hint}) {
     decoration: InputDecoration(
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.r),
-          borderSide: BorderSide(color: Colors.transparent, width: 1),
+          borderSide: const BorderSide(color: Colors.transparent, width: 1),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.r),
-          borderSide: BorderSide(color: Colors.black, width: 0),
+          borderSide: const BorderSide(color: Colors.black, width: 0),
         ),
         contentPadding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
         filled: true,
