@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:multivendor_food_delivery_admin/presentation/chart/components/pie_chart.dart';
 
 import '../chart/chart_section.dart';
 import '../components/section_title_text.dart';
@@ -22,6 +23,7 @@ class DashboardScreen extends StatelessWidget {
             children: [
               const GeneralSection(),
               const ChartSection(),
+              const PieChart(),
               SizedBox(height: 20.h),
               const StockInfo(),
               SizedBox(height: 8.h),
