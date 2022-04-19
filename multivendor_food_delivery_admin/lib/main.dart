@@ -1,9 +1,17 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:multivendor_food_delivery_admin/presentation/user-auth/sign_in/sign_in_screen.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:multivendor_food_delivery_admin/presentation/auth/splash_screen.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.web,
+  );
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -27,7 +35,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
             textTheme: TextTheme(bodyText2: TextStyle(fontSize: 10.sp)),
           ),
-          home: const SignInScreen(),
+          home: const SplashScreen(),
         );
       },
     );

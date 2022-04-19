@@ -1,14 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:logger/logger.dart';
+import 'package:multivendor_food_delivery_admin/application/auth/auth_provider.dart';
+import 'package:multivendor_food_delivery_admin/application/auth/auth_state.dart';
+import 'package:multivendor_food_delivery_admin/domain/auth/user_data.dart';
+import 'package:multivendor_food_delivery_admin/domain/core/failure.dart';
 import 'package:multivendor_food_delivery_admin/presentation/constant.dart';
-import 'package:multivendor_food_delivery_admin/presentation/user-auth/components/sing_in_form.dart';
+import 'package:multivendor_food_delivery_admin/presentation/auth/components/sing_in_form.dart';
+import 'package:multivendor_food_delivery_admin/presentation/dashboard/dashboard_screen.dart';
 
-class SignInScreen extends StatelessWidget {
+class SignInScreen extends ConsumerWidget {
   const SignInScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ref) {
     Size size = MediaQuery.of(context).size;
+
+    final state = ref.watch(authProvider);
+
+    ref.listen<AuthState>(authProvider, (previous, next) {
+      if (previous?.loading != next.loading && !next.loading) {
+        if (next.user != UserData.none()) {
+          Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (ctx) => const DashboardScreen()));
+        }
+
+        if (next.failure != Failure.none()) {
+          Logger().i("time to show error");
+
+          showDialog(
+              context: context,
+              builder: (context) => AlertDialog(
+                    title: Text(next.failure.type),
+                    content: Text(next.failure.error),
+                  ));
+        }
+      }
+    });
     return Scaffold(
       backgroundColor: secondaryColor,
       appBar: AppBar(
@@ -18,6 +47,10 @@ class SignInScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
+            if (state.loading)
+              const LinearProgressIndicator(
+                color: Colors.green,
+              ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: Text(

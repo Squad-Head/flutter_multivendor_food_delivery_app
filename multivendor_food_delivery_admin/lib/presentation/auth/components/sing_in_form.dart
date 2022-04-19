@@ -2,7 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:multivendor_food_delivery_admin/presentation/user-auth/sign_up/sign_up_screen.dart';
+import 'package:multivendor_food_delivery_admin/application/auth/auth_provider.dart';
+import 'package:multivendor_food_delivery_admin/application/auth/auth_state.dart';
+import 'package:multivendor_food_delivery_admin/domain/auth/login_data.dart';
+import 'package:multivendor_food_delivery_admin/domain/auth/user_data.dart';
+import 'package:multivendor_food_delivery_admin/domain/core/failure.dart';
+import 'package:multivendor_food_delivery_admin/presentation/auth/sign_up/sign_up_screen.dart';
+import 'package:multivendor_food_delivery_admin/presentation/dashboard/dashboard_screen.dart';
 
 import 'leading_form_icon.dart';
 import 'sing_in_screen_lower.dart';
@@ -14,6 +20,7 @@ class SignInForm extends HookConsumerWidget {
   Widget build(BuildContext context, ref) {
     final emailController = useTextEditingController();
     final passController = useTextEditingController();
+
     return Form(
       child: Expanded(
         child: ListView(
@@ -37,7 +44,14 @@ class SignInForm extends HookConsumerWidget {
               ),
             ),
             const SizedBox(height: 40),
-            ElevatedButton(onPressed: () {}, child: const Text("SIGN IN")),
+            ElevatedButton(
+                onPressed: () {
+                  final LoginData loginData = LoginData(
+                      email: emailController.text,
+                      password: passController.text);
+                  ref.read(authProvider.notifier).login(loginData);
+                },
+                child: const Text("SIGN IN")),
             const SizedBox(height: 20),
             SignInScreenLower(onPressed: () {
               Navigator.push(context,
