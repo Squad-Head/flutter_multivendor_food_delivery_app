@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'package:multivendor_food_delivery_customer/presentation/authentication/otp_Screen.dart';
 import 'package:multivendor_food_delivery_customer/presentation/constrain.dart';
 
 class CustomButton extends StatelessWidget {
-  CustomButton({
+  const CustomButton({
     Key? key,
     required this.text,
     required this.size,

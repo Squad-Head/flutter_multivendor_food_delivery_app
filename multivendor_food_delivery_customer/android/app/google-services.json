@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "134292426663",
+    "project_id": "fooddelivery-a84d4",
+    "storage_bucket": "fooddelivery-a84d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134292426663:android:4596fd62f806080e543082",
+        "android_client_info": {
+          "package_name": "com.example.merchant_multivendor_food_delivery_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134292426663-n41ff4vfsbm1gefndj8ltl481vicdh4g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDExo0UHHQhYhGS0ih_8MFiZ5zuJvK3BE8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134292426663-n41ff4vfsbm1gefndj8ltl481vicdh4g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "134292426663-33ec2jl2slfsdfp8b61crhqibr59m3ar.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.squadhead.fooddelivery.customer"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134292426663:android:4402fc8d59ed8fdf543082",
+        "android_client_info": {
+          "package_name": "com.example.multivendor_food_delivery_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134292426663-n41ff4vfsbm1gefndj8ltl481vicdh4g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDExo0UHHQhYhGS0ih_8MFiZ5zuJvK3BE8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134292426663-n41ff4vfsbm1gefndj8ltl481vicdh4g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "134292426663-33ec2jl2slfsdfp8b61crhqibr59m3ar.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.squadhead.fooddelivery.customer"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134292426663:android:8a7b4b85bec38715543082",
+        "android_client_info": {
+          "package_name": "com.example.multivendor_food_delivery_customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134292426663-n41ff4vfsbm1gefndj8ltl481vicdh4g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDExo0UHHQhYhGS0ih_8MFiZ5zuJvK3BE8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134292426663-n41ff4vfsbm1gefndj8ltl481vicdh4g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "134292426663-33ec2jl2slfsdfp8b61crhqibr59m3ar.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.squadhead.fooddelivery.customer"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

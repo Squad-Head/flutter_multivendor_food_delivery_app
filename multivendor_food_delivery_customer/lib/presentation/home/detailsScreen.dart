@@ -22,7 +22,7 @@ class FoodDetailsScreen extends StatelessWidget {
               children: [
                 Container(
                   height: size.height * 0.45,
-                  color: Color(0xFFffffff),
+                  color: const Color(0xFFffffff),
                   child: Image.network(
                     "https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                     fit: BoxFit.cover,
@@ -41,7 +41,7 @@ class FoodDetailsScreen extends StatelessWidget {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 "Wagyu A5 Rare hot",
                                 style: TextStyle(
                                   fontSize: 28,
@@ -50,9 +50,9 @@ class FoodDetailsScreen extends StatelessWidget {
                               ),
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text("4.3"),
-                                  Text(
+                                children: const[
+                                   Text("4.3"),
+                                   Text(
                                     "(342 Reviews)",
                                   )
                                 ],
@@ -60,7 +60,7 @@ class FoodDetailsScreen extends StatelessWidget {
                             ],
                           ),
                           Container(
-                              padding: EdgeInsets.symmetric(horizontal: 6.5),
+                              padding: const EdgeInsets.symmetric(horizontal: 6.5),
                               height: size.height * 0.05.h,
                               width: size.width * 0.25.w,
                               decoration: BoxDecoration(
@@ -76,9 +76,9 @@ class FoodDetailsScreen extends StatelessWidget {
                                         borderRadius:
                                             BorderRadius.circular(12)),
                                     child: IconButton(
-                                        padding: EdgeInsets.all(0),
+                                        padding: const EdgeInsets.all(0),
                                         onPressed: () {},
-                                        icon: Icon(
+                                        icon: const Icon(
                                           FontAwesomeIcons.minus,
                                           size: 18,
                                         )),
@@ -89,10 +89,10 @@ class FoodDetailsScreen extends StatelessWidget {
                                   SizedBox(
                                       height: size.height * 0.04.h,
                                       width: size.width * 0.07.w,
-                                      child: Center(
+                                      child: const Center(
                                           child: Text(
                                         "1",
-                                        style: TextStyle(fontSize: 20),
+                                        style:  TextStyle(fontSize: 20),
                                       ))),
                                   SizedBox(
                                     width: 3.h,
@@ -106,9 +106,9 @@ class FoodDetailsScreen extends StatelessWidget {
                                             BorderRadius.circular(12)),
                                     child: IconButton(
                                         // alignment: Alignment.centerLeft,
-                                        padding: EdgeInsets.all(0),
+                                        padding: const EdgeInsets.all(0),
                                         onPressed: () {},
-                                        icon: Icon(
+                                        icon: const Icon(
                                           FontAwesomeIcons.plus,
                                           size: 18,
                                         )),
@@ -117,8 +117,8 @@ class FoodDetailsScreen extends StatelessWidget {
                               )),
                         ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 16.0),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(vertical: 16.0),
                         child: Text(
                           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard ",
                           style: TextStyle(fontSize: 17, color: Colors.grey),
@@ -153,7 +153,7 @@ class FoodDetailsScreen extends StatelessWidget {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               height: size.height * 0.10,
               width: double.infinity,
               // color: Colors.amberAccent,
@@ -162,7 +162,7 @@ class FoodDetailsScreen extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        Text(
+                        const Text(
                           "Price",
                           style: TextStyle(color: Colors.grey),
                         ),
@@ -176,7 +176,7 @@ class FoodDetailsScreen extends StatelessWidget {
                       ],
                     ),
                     Container(
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       height: size.height * 0.07.h,
                       width: size.width * 0.50.w,
                       decoration: BoxDecoration(

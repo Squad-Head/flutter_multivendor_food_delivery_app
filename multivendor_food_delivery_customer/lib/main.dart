@@ -4,19 +4,17 @@ import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:multivendor_food_delivery_customer/presentation/Payment/checkoutScreen.dart';
-import 'package:multivendor_food_delivery_customer/presentation/authentication/SignIn.dart';
-import 'package:multivendor_food_delivery_customer/presentation/home/detailsScreen.dart';
-import 'package:multivendor_food_delivery_customer/presentation/home/homepage.dart';
+import 'package:multivendor_food_delivery_customer/firebase_options.dart';
+import 'package:multivendor_food_delivery_customer/presentation/Payment/checkout_screen.dart';
 
-void main() {
-  runApp(MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(const MyApp());
 }
 
 class MyApp extends ConsumerWidget {
-  MyApp({Key? key}) : super(key: key);
-  // final _appRouter = AppRouter();
-
+  const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context, ref) {
     return ScreenUtilInit(
@@ -38,10 +36,7 @@ class MyApp extends ConsumerWidget {
                 surfaceMode: FlexSurfaceMode.highScaffoldLevelSurface,
                 useSubThemes: true,
                 scheme: FlexScheme.deepBlue),
-            // routeInformationParser: _appRouter.defaultRouteParser(),
-            // routerDelegate: _appRouter.delegate(
-            //     navigatorObservers: () => [BotToastNavigatorObserver()]),
-            home: SignInScreen(),
+            home: const CheckOutScreen(),
           );
         });
   }

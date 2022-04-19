@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:multivendor_food_delivery_customer/presentation/authentication/widget/custome_text.dart';
 
-import 'package:multivendor_food_delivery_customer/presentation/authentication/otp_Screen.dart';
-import 'package:multivendor_food_delivery_customer/presentation/authentication/widget/customeButton.dart';
-import 'package:multivendor_food_delivery_customer/presentation/authentication/widget/customeText.dart';
+import 'package:multivendor_food_delivery_customer/presentation/authentication/widget/rounded_button.dart';
+import 'package:multivendor_food_delivery_customer/presentation/authentication/widget/rounded_input_field.dart';
 import 'package:multivendor_food_delivery_customer/presentation/constrain.dart';
-import 'package:multivendor_food_delivery_customer/presentation/signUp.dart';
+import 'package:multivendor_food_delivery_customer/presentation/home/homepage.dart';
 
 class SignInScreen extends StatelessWidget {
-  const SignInScreen({Key? key}) : super(key: key);
-
+  SignInScreen({Key? key}) : super(key: key);
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  final List<Color> cl = [kPrimaryColor, kGreen];
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Color(0xff14bf61),
+      // backgroundColor: Color(0xff14bf61),
       body: SafeArea(
           child: Center(
         child: Padding(
@@ -27,82 +29,62 @@ class SignInScreen extends StatelessWidget {
               Text(
                 "Pada Order",
                 style: TextStyle(
-                  color: kButton,
+                  color: kPrimaryColor,
                   fontSize: 40.sp,
                 ),
               ),
-              Text(
+              const Text(
                 "Order food You Love",
-                style: TextStyle(color: kButton),
+                style: TextStyle(color: kPrimaryColor),
               ),
               SizedBox(
                 height: size.height * 0.32.h,
-              ),
-              Container(
-                height: size.height * 0.07.h,
-                width: size.width,
-                child: TextFormField(
-                  keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
-                    hintText: "Example: 0166180630",
-                    labelText: "Phone number",
-                    labelStyle: TextStyle(fontSize: 14.sp, color: kButton),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide(color: Colors.white),
-                    ),
+                child: ShaderMask(
+                  blendMode: BlendMode.srcATop,
+                  shaderCallback: (Rect bounds) {
+                    return RadialGradient(
+                      center: Alignment.center,
+                      radius: 1.0,
+                      colors: <Color>[
+                        kPrimaryColor,
+                        kGreen,
+                      ],
+                      tileMode: TileMode.repeated,
+                    ).createShader(bounds);
+                  },
+                  child: Icon(
+                    FontAwesomeIcons.utensils,
+                    size: size.height * 0.20,
                   ),
                 ),
+              ),
+              RoundedInputField(
+                emailController,
+                hintText: "Email",
+                inputType: InputFieldType.email,
+                icon: FontAwesomeIcons.envelope,
               ),
               SizedBox(
                 height: size.height * 0.02.h,
               ),
-              CustomButton(
-                text: "Continue With Mobile Number",
-                size: 20,
-                icon: FontAwesomeIcons.phone,
-                function: () {
-                  print("Pressed");
+              RoundedInputField(
+                passwordController,
+                hintText: "Password",
+                inputType: InputFieldType.password,
+                icon: FontAwesomeIcons.lock,
+              ),
+              SizedBox(
+                height: size.height * 0.05,
+              ),
+              RoundedButton(
+                text: "LOGIN",
+                press: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => OTPScreen()));
+                      MaterialPageRoute(builder: (context) => HomePage()));
                 },
               ),
               SizedBox(
                 height: size.height * 0.02.h,
-              ),
-              Row(
-                children: [
-                  Expanded(
-                      child: Divider(
-                    color: kButton,
-                  )),
-                  SizedBox(
-                    width: 16.w,
-                  ),
-                  Text(
-                    "Or",
-                    style: TextStyle(color: kButton),
-                  ),
-                  SizedBox(
-                    width: 16.w,
-                  ),
-                  Expanded(
-                      child: Divider(
-                    color: kButton,
-                  )),
-                ],
-              ),
-              SizedBox(
-                height: size.height * 0.02.h,
-              ),
-              CustomButton(
-                text: "Continue With Google",
-                size: 20,
-                icon: FontAwesomeIcons.google,
-                function: () {},
-              ),
-              SizedBox(
-                height: 16.h,
               ),
               Wrap(
                 children: [

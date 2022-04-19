@@ -19,7 +19,7 @@ class Horizontal extends StatelessWidget {
         itemCount: resturantName.length,
         itemBuilder: (context, index) {
           return Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 // color: Color.fromARGB(255, 243, 240, 240),
                 ),
             height: 200,
@@ -49,7 +49,7 @@ class Horizontal extends StatelessWidget {
                           // color: Colors.redAccent,
                           height: 20,
                           width: 70,
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "HOTDEALS",
                               style: TextStyle(
@@ -70,20 +70,20 @@ class Horizontal extends StatelessWidget {
                             children: [
                               Text(
                                 resturantName[index],
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontSize: 16,
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 16,
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
+                                children: const [
                                   Text(
                                     "30 Min ! 1 Serving",
-                                    style: TextStyle(color: Colors.white),
+                                    style: const TextStyle(color: Colors.white),
                                   ),
                                   SizedBox(
                                     width: 10,
@@ -100,7 +100,7 @@ class Horizontal extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 2,
                   ),
                 ],

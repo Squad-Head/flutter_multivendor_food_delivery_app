@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:multivendor_food_delivery_customer/presentation/constrain.dart';
-import 'package:multivendor_food_delivery_customer/presentation/home/horizontalList.dart';
+import 'package:multivendor_food_delivery_customer/presentation/home/horizontal_list.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomePage extends StatelessWidget {
@@ -84,21 +84,21 @@ class HomePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
+                    IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           "Location",
                           style: TextStyle(color: Colors.black, fontSize: 16),
                         ),
                         Row(
-                          children: [
+                          children: const [
                             Icon(Icons.near_me),
                             Text(
                               "Gulshan, Dhaka",
-                              style: TextStyle(fontSize: 16),
+                              style:  TextStyle(fontSize: 16),
                             )
                           ],
                         )
@@ -106,7 +106,7 @@ class HomePage extends StatelessWidget {
                     ),
                     IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.shopping_bag_outlined))
+                        icon: const Icon(Icons.shopping_bag_outlined))
                   ],
                 ),
                 Stack(
@@ -136,14 +136,14 @@ class HomePage extends StatelessWidget {
                             children: [
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
+                                children: const [
                                   Text(
                                     "Hi, Omar!",
                                     style:
                                         TextStyle(fontWeight: FontWeight.bold),
                                   ),
                                   Text(
-                                    "You\'ve 23 discount ticket",
+                                    "You've 23 discount ticket",
                                     style: TextStyle(color: Colors.grey),
                                   ),
                                 ],
@@ -160,7 +160,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 SizedBox(
@@ -183,7 +183,7 @@ class HomePage extends StatelessWidget {
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
                               itemType[index],
-                              style: TextStyle(fontSize: 16),
+                              style: const TextStyle(fontSize: 16),
                             ),
                           ),
                         ),
@@ -199,7 +199,7 @@ class HomePage extends StatelessWidget {
                     )),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     Text(
                       "Near You!",
                       style: TextStyle(
@@ -214,7 +214,7 @@ class HomePage extends StatelessWidget {
                   height: size.height * 0.01.h,
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 8),
+                  margin: const EdgeInsets.only(top: 8),
                   height: size.height * 0.20,
                   width: size.width,
                   child: ClipRRect(
@@ -232,7 +232,7 @@ class HomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
-                      children: [
+                      children: const [
                         Text(
                           "People Are looking!",
                           style: TextStyle(
@@ -246,17 +246,17 @@ class HomePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Text("See all"),
+                    const Text("See all"),
                   ],
                 ),
                 SizedBox(height: 20.h),
                 ListView.builder(
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     itemCount: mostSItems.length,
                     itemBuilder: (context, index) {
                       return Container(
-                        padding: EdgeInsets.symmetric(vertical: 8),
+                        padding: const EdgeInsets.symmetric(vertical: 8),
                         // margin: EdgeInsets.only(left: 8),
                         // color: Colors.amber,
                         height: 70.h,
@@ -282,13 +282,13 @@ class HomePage extends StatelessWidget {
                                     children: [
                                       Text(
                                         mostSItems[index],
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                             fontSize: 20,
                                             fontWeight: FontWeight.bold),
                                       ),
                                       Row(
                                         children: [
-                                          Icon(
+                                          const Icon(
                                             Icons.star_border,
                                             color: Colors.amberAccent,
                                           ),
@@ -300,7 +300,7 @@ class HomePage extends StatelessWidget {
                                 )
                               ],
                             ),
-                            Icon(FontAwesomeIcons.angleRight)
+                            const Icon(FontAwesomeIcons.angleRight)
                           ],
                         ),
                       );
@@ -320,15 +320,15 @@ class HomePage extends StatelessWidget {
             ),
             label: "Home",
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(FontAwesomeIcons.search),
             label: "Search",
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(FontAwesomeIcons.heart),
             label: "Search",
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(FontAwesomeIcons.user),
             label: "Search",
           ),
