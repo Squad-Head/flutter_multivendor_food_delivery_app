@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'presentation/admin/admin_screen.dart';
+import 'package:multivendor_food_delivery_admin/presentation/user-auth/sign_in/sign_in_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
             textTheme: TextTheme(bodyText2: TextStyle(fontSize: 10.sp)),
           ),
-          home: const AdminScreen(),
+          home: const SignInScreen(),
         );
       },
     );
